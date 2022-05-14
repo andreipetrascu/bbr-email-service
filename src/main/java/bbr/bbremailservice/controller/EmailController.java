@@ -16,6 +16,11 @@ public class EmailController {
     @Autowired
     EmailService emailService;
 
+    @GetMapping(path = "/welcome")
+    public String welcome() {
+        return "Congrats! you are on the right way.";
+    }
+
     @GetMapping(path = "/hello")
     public Response hello() {
         return new Response(1, "hello from email-controller", null);
