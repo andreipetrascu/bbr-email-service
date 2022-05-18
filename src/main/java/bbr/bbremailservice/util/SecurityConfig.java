@@ -15,7 +15,8 @@ public class SecurityConfig {
      * Allow requests only from Api Gateway Service
      */
     //private static final String ALLOWED_ORIGIN = "http://localhost:7000";
-    private static final String ALLOWED_ORIGIN = "http://bbr-api-gateway.azurewebsites.net";
+    //private static final String ALLOWED_ORIGIN = "http://bbr-api-gateway.azurewebsites.net";
+    private static final String ALLOWED_ORIGIN = "http://net.org";
 
     @Bean
     public WebMvcConfigurer corsConfigurer() {
