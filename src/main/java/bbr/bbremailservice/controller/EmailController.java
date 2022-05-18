@@ -35,4 +35,16 @@ public class EmailController {
         return ok(emailService.sendEmail(emailDTO));
     }
 
+    @PostMapping(path = "/send-security-code")
+    public HttpEntity sendSecurityCode(@RequestBody EmailDTO emailDTO) {
+        logger.info("[EmailController]: /send-security-code");
+        return ok(emailService.sendSecurityCode(emailDTO));
+    }
+
+    @PostMapping(path = "/verify-security-code")
+    public HttpEntity verifySecurityCode(@RequestBody EmailDTO emailDTO) {
+        logger.info("[EmailController]: /verify-security-code");
+        return ok(emailService.verifySecurityCode(emailDTO));
+    }
+
 }
